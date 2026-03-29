@@ -1,0 +1,29 @@
+[project]
+name = "questboard"
+version = "0.1.0"
+description = "Turn your Notion workspace into an RPG. AI-powered gamification of your tasks and habits."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "bO-05" }]
+keywords = ["notion", "mcp", "gamification", "rpg", "ai", "productivity"]
+
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "anthropic>=0.52.0",
+    "openai>=1.30.0",
+    "typer[all]>=0.15.0",
+    "httpx>=0.28.0",
+    "python-dotenv>=1.1.0",
+    "rich>=14.0.0",
+]
+
+[project.scripts]
+questboard = "src.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"

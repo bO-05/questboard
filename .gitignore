@@ -1,0 +1,13 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+.questboard_workspace.json
+.questboard_service.json
+.questboard_service.log
+dist/
+*.egg-info/
+.venv/
+node_modules/
+data/
